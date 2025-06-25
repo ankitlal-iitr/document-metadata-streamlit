@@ -250,7 +250,14 @@ print("Keywords:", keywords)
 import spacy
 
 # Load English NER model
-nlp = spacy.load("en_core_web_sm")
+import spacy
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    import os
+    os.system("python -m spacy download en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 
 def extract_entities(text):
     doc = nlp(text)
