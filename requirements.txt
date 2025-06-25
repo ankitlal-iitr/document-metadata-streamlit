@@ -1,0 +1,9 @@
+streamlit
+pymupdf
+pytesseract
+Pillow
+langdetect
+keybert
+sentence-transformers
+transformers
+spacy
